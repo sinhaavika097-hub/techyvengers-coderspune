@@ -1,0 +1,25 @@
+{
+    "employee_id": "559",
+    "employee_name": "Ansh",
+    "metadata": {
+        "status": "success",
+        "fetched_channels": 5,
+        "access_level": "global_admin_view"
+    },
+    "github": [
+        {"id": 101, "title": "Sentinel-Firewall", "date": "2026-01-15T10:30:00Z", "type": "repo"}
+    ],
+    "jira": [
+        {"id": "AUTH-101", "title": "Zero-Trust Integration", "date": "2026-01-18T09:15:00Z", "type": "ticket"}
+    ],
+    "notion": [
+        {"id": "N-55", "title": "API Architecture Notes", "date": "2026-01-20T14:45:00Z", "type": "document"},
+        {"id": "N-56", "title": "February Sprint Planning", "date": "2026-02-05T10:00:00Z", "type": "document"}
+    ],
+    "slack": [
+        {"id": "S-01", "title": "Project Handover Discussion", "date": "2026-01-28T16:20:00Z", "type": "message"}
+    ],
+    "trello": [
+        {"id": "T-99", "title": "Backend Migration Board", "date": "2026-02-10T11:00:00Z", "type": "board"}
+    ]
+}
