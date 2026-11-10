@@ -73,7 +73,17 @@ function submitAuth() {
         setTimeout(() => err.classList.remove('animate-pulse'), 500);
     }
 }
-
+document.addEventListener("DOMContentLoaded", function() {
+    const passInput = document.getElementById('auth-pass'); 
+    if (passInput) {
+        passInput.addEventListener('keypress', function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); 
+                submitAuth(); 
+            }
+        });
+    }
+});
 // 3. Render Secure Timeline Workspace
 function renderWorkspace() {
     document.getElementById('welcome-screen').classList.add('hidden');
