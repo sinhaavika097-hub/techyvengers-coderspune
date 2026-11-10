@@ -1,0 +1,125 @@
+{
+    "metadata": { "status": "success", "total_records": 3 },
+    "employees": [
+        {
+            "id": "E1",
+            "name": "Anvesha K",
+            "role": "Lead Architect",
+            "joined_date": "01/2026",
+            "left_date": "06/2026",
+            "auth": { "incoming_id": "NEW-E1", "password": "hackathon2026" },
+            "timeline": {
+                "2026-06": {
+                    "GitHub": [ { "title": "Final Handover Repo", "url": "#" }, { "title": "Auth-Service-V2", "url": "#" } ],
+                    "PPTs": [ { "title": "June Sprint Review", "url": "#" }, { "title": "Q2 Architecture Deck", "url": "#" }, { "title": "Deployment Strategy", "url": "#" }, { "title": "Database Migration Plan", "url": "#" }, { "title": "Final Handover Presentation", "url": "#" } ],
+                    "Memos": [ { "title": "Security Audit Memo", "url": "#" }, { "title": "Team Handoff Notes", "url": "#" }, { "title": "API Deprecation Warning", "url": "#" }, { "title": "Vendor Contract Update", "url": "#" }, { "title": "Infrastructure Scaling", "url": "#" }, { "title": "Code Freeze Guidelines", "url": "#" }, { "title": "Post-Mortem June Outage", "url": "#" } ]
+                },
+                "2026-05": {
+                    "GitHub": [ { "title": "Payment-Gateway-Core", "url": "#" }, { "title": "GraphQL-Migration", "url": "#" } ],
+                    "PPTs": [ { "title": "May Board Update", "url": "#" }, { "title": "Payment Flow Redesign", "url": "#" }, { "title": "GraphQL Benefits", "url": "#" }, { "title": "Tech Debt Analysis", "url": "#" }, { "title": "Resource Allocation May", "url": "#" } ],
+                    "Memos": [ { "title": "May Objectives Memo", "url": "#" }, { "title": "Stripe API Keys Rotation", "url": "#" }, { "title": "Frontend Sync Notes", "url": "#" }, { "title": "Compliance Review", "url": "#" }, { "title": "Server Upgrade Warning", "url": "#" }, { "title": "New Hire Onboarding", "url": "#" }, { "title": "Holiday Coverage Plan", "url": "#" } ]
+                },
+                "2026-04": {
+                    "GitHub": [ { "title": "Legacy-System-Archive", "url": "#" }, { "title": "Microservices-Docker", "url": "#" } ],
+                    "PPTs": [ { "title": "Q1 Performance Review", "url": "#" }, { "title": "Dockerizing Legacy Apps", "url": "#" }, { "title": "April Townhall Deck", "url": "#" }, { "title": "Security Training", "url": "#" }, { "title": "Microservices Topology", "url": "#" } ],
+                    "Memos": [ { "title": "April Kickoff", "url": "#" }, { "title": "Log4j Patch Status", "url": "#" }, { "title": "AWS Billing Report", "url": "#" }, { "title": "QA Testing Guidelines", "url": "#" }, { "title": "Client Meeting Minutes", "url": "#" }, { "title": "VPN Access Policy", "url": "#" }, { "title": "Emergency Rollback Proc", "url": "#" } ]
+                },
+                "2026-03": {
+                    "GitHub": [ { "title": "Cloud-Storage-Sync", "url": "#" }, { "title": "Data-Analytics-Pipeline", "url": "#" } ],
+                    "PPTs": [ { "title": "Analytics Pipeline Intro", "url": "#" }, { "title": "Cloud Cost Optimization", "url": "#" }, { "title": "March Roadmap", "url": "#" }, { "title": "Data Privacy Standards", "url": "#" }, { "title": "System Architecture V1", "url": "#" } ],
+                    "Memos": [ { "title": "Storage Limits Alert", "url": "#" }, { "title": "Database Indexing", "url": "#" }, { "title": "March Bug Bash", "url": "#" }, { "title": "Third-Party Lib Audit", "url": "#" }, { "title": "SLA Metrics Report", "url": "#" }, { "title": "Internal Hackathon Ideas", "url": "#" }, { "title": "Remote Work Policy", "url": "#" } ]
+                },
+                "2026-02": {
+                    "GitHub": [ { "title": "User-Auth-Module", "url": "#" }, { "title": "Notification-Service", "url": "#" } ],
+                    "PPTs": [ { "title": "Auth Module Spec", "url": "#" }, { "title": "Push Notification Flow", "url": "#" }, { "title": "February Sprint Plan", "url": "#" }, { "title": "Mobile App Sync", "url": "#" }, { "title": "User Journey Map", "url": "#" } ],
+                    "Memos": [ { "title": "OAuth Integration", "url": "#" }, { "title": "Email Template Drafts", "url": "#" }, { "title": "Twilio Setup Notes", "url": "#" }, { "title": "Session Timeout Logic", "url": "#" }, { "title": "Firebase Configs", "url": "#" }, { "title": "Load Testing Results", "url": "#" }, { "title": "UI Mockup Feedback", "url": "#" } ]
+                },
+                "2026-01": {
+                    "GitHub": [ { "title": "Initial-Project-Scaffold", "url": "#" }, { "title": "CI-CD-Actions", "url": "#" } ],
+                    "PPTs": [ { "title": "Project Kickoff", "url": "#" }, { "title": "Team Introductions", "url": "#" }, { "title": "Tech Stack Justification", "url": "#" }, { "title": "Yearly Milestones", "url": "#" }, { "title": "Git Workflow Standards", "url": "#" } ],
+                    "Memos": [ { "title": "Welcome to the Team", "url": "#" }, { "title": "Environment Variables", "url": "#" }, { "title": "Local Setup Guide", "url": "#" }, { "title": "Jira Convention", "url": "#" }, { "title": "Slack Channel List", "url": "#" }, { "title": "Meeting Schedules", "url": "#" }, { "title": "Hardware Requests", "url": "#" } ]
+                }
+            }
+        },
+        {
+            "id": "E2",
+            "name": "Ansh Raj",
+            "role": "Backend Engineer",
+            "joined_date": "02/2026",
+            "left_date": "07/2026",
+            "auth": { "incoming_id": "NEW-E2", "password": "hackathon2026" },
+            "timeline": {
+                "2026-07": {
+                    "GitHub": [ { "title": "JSON-Parser-Engine-CPP", "url": "#" }, { "title": "Enterprise-Handover-Pipeline", "url": "#" } ],
+                    "PPTs": [ { "title": "July Backend Sync", "url": "#" }, { "title": "Memory Leak Findings", "url": "#" }, { "title": "C++ Optimization Deck", "url": "#" }, { "title": "API Rate Limiting", "url": "#" }, { "title": "Exit Interview Deck", "url": "#" } ],
+                    "Memos": [ { "title": "Final API Documentation", "url": "#" }, { "title": "Handover Checklist", "url": "#" }, { "title": "Database Index Rebuild", "url": "#" }, { "title": "Load Balancer Config", "url": "#" }, { "title": "Pending Jira Tickets", "url": "#" }, { "title": "Server Decommission", "url": "#" }, { "title": "Team Farewell Note", "url": "#" } ]
+                },
+                "2026-06": {
+                    "GitHub": [ { "title": "LabGuard-Dashboard-API", "url": "#" }, { "title": "Crow-REST-Endpoints", "url": "#" } ],
+                    "PPTs": [ { "title": "June Architecture Review", "url": "#" }, { "title": "Security Vulnerabilities", "url": "#" }, { "title": "WebSockets Intro", "url": "#" }, { "title": "Database Sharding", "url": "#" }, { "title": "Microservices Sync", "url": "#" } ],
+                    "Memos": [ { "title": "Crow Framework Update", "url": "#" }, { "title": "Memory Profiling Log", "url": "#" }, { "title": "Client SLA Breach", "url": "#" }, { "title": "New Server Provisioning", "url": "#" }, { "title": "Log Rotation Policy", "url": "#" }, { "title": "Code Review Guidelines", "url": "#" }, { "title": "June Outage Report", "url": "#" } ]
+                },
+                "2026-05": {
+                    "GitHub": [ { "title": "Sentinel-Firewall-Firmware", "url": "#" }, { "title": "ESP32-Sensors-Data", "url": "#" } ],
+                    "PPTs": [ { "title": "May IoT Integration", "url": "#" }, { "title": "Hardware Limitations", "url": "#" }, { "title": "Firmware Deployment", "url": "#" }, { "title": "Network Latency", "url": "#" }, { "title": "Robotics Sync Deck", "url": "#" } ],
+                    "Memos": [ { "title": "Sensor Calibration", "url": "#" }, { "title": "Firmware Patch 1.2", "url": "#" }, { "title": "Vendor Parts Order", "url": "#" }, { "title": "Overheating Issues", "url": "#" }, { "title": "Battery Drain Test", "url": "#" }, { "title": "May Objectives", "url": "#" }, { "title": "Robo Avengers Prep", "url": "#" } ]
+                },
+                "2026-04": {
+                    "GitHub": [ { "title": "id2-Core-Architecture", "url": "#" }, { "title": "Tesseract-OCR-Module", "url": "#" } ],
+                    "PPTs": [ { "title": "OCR Accuracy Metrics", "url": "#" }, { "title": "April Code Freeze", "url": "#" }, { "title": "Image Processing Pipeline", "url": "#" }, { "title": "OpenCV Techniques", "url": "#" }, { "title": "Hackathon Strategy", "url": "#" } ],
+                    "Memos": [ { "title": "OCR Error Logs", "url": "#" }, { "title": "Image Preprocessing", "url": "#" }, { "title": "Memory Allocation", "url": "#" }, { "title": "C++17 Migration", "url": "#" }, { "title": "Library Dependencies", "url": "#" }, { "title": "Build System Updates", "url": "#" }, { "title": "April Sprint Retrospective", "url": "#" } ]
+                },
+                "2026-03": {
+                    "GitHub": [ { "title": "Smart-Assist-Glasses-CV", "url": "#" }, { "title": "DigiYatra-SSI-Integration", "url": "#" } ],
+                    "PPTs": [ { "title": "Computer Vision Basics", "url": "#" }, { "title": "SSI Architecture", "url": "#" }, { "title": "Credential Verification", "url": "#" }, { "title": "March Progress Report", "url": "#" }, { "title": "Backend Optimization", "url": "#" } ],
+                    "Memos": [ { "title": "Camera Driver Setup", "url": "#" }, { "title": "Verifiable Credentials", "url": "#" }, { "title": "Identity Wallets", "url": "#" }, { "title": "March Bug Tracking", "url": "#" }, { "title": "API Rate Limits", "url": "#" }, { "title": "Unit Test Coverage", "url": "#" }, { "title": "Cloud Server Logs", "url": "#" } ]
+                },
+                "2026-02": {
+                    "GitHub": [ { "title": "Initial-Backend-Setup", "url": "#" }, { "title": "Database-Schema-Definitions", "url": "#" } ],
+                    "PPTs": [ { "title": "Project Onboarding", "url": "#" }, { "title": "Database ERD", "url": "#" }, { "title": "API Contract Specs", "url": "#" }, { "title": "Development Workflow", "url": "#" }, { "title": "Security Protocols", "url": "#" } ],
+                    "Memos": [ { "title": "Welcome Aboard", "url": "#" }, { "title": "Environment Configs", "url": "#" }, { "title": "Local Docker Setup", "url": "#" }, { "title": "Access Credentials", "url": "#" }, { "title": "Coding Standards", "url": "#" }, { "title": "Jira Board Link", "url": "#" }, { "title": "First Week Tasks", "url": "#" } ]
+                }
+            }
+        },
+        {
+            "id": "E3",
+            "name": "Himanshu Kumar",
+            "role": "DevOps Engineer",
+            "joined_date": "03/2026",
+            "left_date": "08/2026",
+            "auth": { "incoming_id": "NEW-E3", "password": "hackathon2026" },
+            "timeline": {
+                "2026-08": {
+                    "GitHub": [ { "title": "CI-CD-Pipeline-Final", "url": "#" }, { "title": "Terraform-Modules", "url": "#" } ],
+                    "PPTs": [ { "title": "August Final Handover", "url": "#" }, { "title": "Infrastructure Map", "url": "#" }, { "title": "Disaster Recovery Test", "url": "#" }, { "title": "Terraform State", "url": "#" }, { "title": "Exit Presentation", "url": "#" } ],
+                    "Memos": [ { "title": "Pipeline Completion", "url": "#" }, { "title": "AWS IAM Roles", "url": "#" }, { "title": "Final Security Scan", "url": "#" }, { "title": "Handover Sign-off", "url": "#" }, { "title": "Root Access Transfer", "url": "#" }, { "title": "Pending Alerts", "url": "#" }, { "title": "Farewell Email", "url": "#" } ]
+                },
+                "2026-07": {
+                    "GitHub": [ { "title": "Kubernetes-Configs", "url": "#" }, { "title": "Helm-Charts", "url": "#" } ],
+                    "PPTs": [ { "title": "July Infrastructure Review", "url": "#" }, { "title": "K8s Cluster Health", "url": "#" }, { "title": "Cost Optimization Deck", "url": "#" }, { "title": "Scaling Policies", "url": "#" }, { "title": "Monitoring Alerts", "url": "#" } ],
+                    "Memos": [ { "title": "AWS Server Costs", "url": "#" }, { "title": "Cluster Autoscaler", "url": "#" }, { "title": "Prometheus Setup", "url": "#" }, { "title": "Grafana Dashboards", "url": "#" }, { "title": "July Uptime Report", "url": "#" }, { "title": "Node Pool Upgrades", "url": "#" }, { "title": "Secret Management", "url": "#" } ]
+                },
+                "2026-06": {
+                    "GitHub": [ { "title": "Docker-Images-Registry", "url": "#" }, { "title": "Ansible-Playbooks", "url": "#" } ],
+                    "PPTs": [ { "title": "Container Strategy", "url": "#" }, { "title": "Ansible Automation", "url": "#" }, { "title": "June Deployment Sync", "url": "#" }, { "title": "Security Hardening", "url": "#" }, { "title": "Network Topology", "url": "#" } ],
+                    "Memos": [ { "title": "Docker Container Specs", "url": "#" }, { "title": "Image Vulnerabilities", "url": "#" }, { "title": "Base OS Updates", "url": "#" }, { "title": "Playbook Refactoring", "url": "#" }, { "title": "June Maintenance Window", "url": "#" }, { "title": "Firewall Rules", "url": "#" }, { "title": "VPC Peering Log", "url": "#" } ]
+                },
+                "2026-05": {
+                    "GitHub": [ { "title": "GitHub-Actions-Runners", "url": "#" }, { "title": "Nginx-Ingress-Controller", "url": "#" } ],
+                    "PPTs": [ { "title": "Infrastructure Migration", "url": "#" }, { "title": "Load Balancing Setup", "url": "#" }, { "title": "May Ops Review", "url": "#" }, { "title": "Self-Hosted Runners", "url": "#" }, { "title": "SSL Certificate Renewal", "url": "#" } ],
+                    "Memos": [ { "title": "Migration Downtime", "url": "#" }, { "title": "DNS Propagation", "url": "#" }, { "title": "SSL Config Error", "url": "#" }, { "title": "Action Runner Limits", "url": "#" }, { "title": "May Cost Spikes", "url": "#" }, { "title": "Bandwidth Usage", "url": "#" }, { "title": "Rate Limit Exceeded", "url": "#" } ]
+                },
+                "2026-04": {
+                    "GitHub": [ { "title": "CloudFormation-Templates", "url": "#" }, { "title": "Serverless-Framework", "url": "#" } ],
+                    "PPTs": [ { "title": "Serverless Adoption", "url": "#" }, { "title": "April Cloud Review", "url": "#" }, { "title": "Lambda Limitations", "url": "#" }, { "title": "Database Backups", "url": "#" }, { "title": "Disaster Recovery V1", "url": "#" } ],
+                    "Memos": [ { "title": "Lambda Cold Starts", "url": "#" }, { "title": "RDS Snapshot Schedule", "url": "#" }, { "title": "April Security Audit", "url": "#" }, { "title": "IAM Policy Revisions", "url": "#" }, { "title": "S3 Bucket Policies", "url": "#" }, { "title": "CloudWatch Alarms", "url": "#" }, { "title": "Log Retention Policy", "url": "#" } ]
+                },
+                "2026-03": {
+                    "GitHub": [ { "title": "DevOps-Scripts-Library", "url": "#" }, { "title": "Initial-VPC-Setup", "url": "#" } ],
+                    "PPTs": [ { "title": "DevOps Kickoff", "url": "#" }, { "title": "Cloud Architecture V1", "url": "#" }, { "title": "Tooling Selection", "url": "#" }, { "title": "March Objectives", "url": "#" }, { "title": "Team Access Control", "url": "#" } ],
+                    "Memos": [ { "title": "Welcome Note", "url": "#" }, { "title": "AWS Account Creation", "url": "#" }, { "title": "Billing Alerts Setup", "url": "#" }, { "title": "Root MFA Configured", "url": "#" }, { "title": "VPN User List", "url": "#" }, { "title": "Subnet Allocations", "url": "#" }, { "title": "Initial Resource Provisioning", "url": "#" } ]
+                }
+            }
+        }
+    ]
+}
