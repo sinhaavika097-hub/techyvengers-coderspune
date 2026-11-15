@@ -2,41 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Knowledge Handover API - Judge Demo</title>
+    <title>Knowledge Handover & Security Portal</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
-        h1 { color: #38bdf8; }
-        .card { background: #1e293b; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 15px; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 30px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
+        h1 { color: #38bdf8; text-align: center; }
+        .subtitle { text-align: center; color: #94a3b8; margin-bottom: 30px; }
+        .card { background: #1e293b; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #334155; }
+        h3 { margin-top: 0; color: #38bdf8; }
+        input, button { padding: 10px; margin: 5px 0; border-radius: 4px; border: 1px solid #475569; background: #0f172a; color: #fff; width: 100%; box-sizing: border-box; }
+        button { background: #38bdf8; color: #0f172a; font-weight: bold; border: none; cursor: pointer; }
         button:hover { background: #0ea5e9; }
-        pre { background: #0f172a; padding: 10px; border-radius: 4px; overflow-x: auto; color: #34d399; }
+        .tier-btns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        pre { background: #0f172a; padding: 10px; border-radius: 4px; overflow-x: auto; color: #34d399; font-size: 12px; }
     </style>
 </head>
 <body>
-    <h1>Knowledge Handover API</h1>
-    <p>Live Backend Demo for Judges</p>
+    <h1>Enterprise Knowledge Handover Portal</h1>
+    <div class="subtitle">Secure Transition & Progressive Tenure Access Control</div>
     
+    <!-- 1. REGISTRATION -->
     <div class="card">
-        <h3>Test Tenure Middleware (Tier 3 Access)</h3>
-        <button onclick="testTier3()">Send Test Request</button>
-        <pre id="result">Click button to test API response...</pre>
+        <h3>1. Personnel Registration</h3>
+        <input type="text" id="regEmpId" placeholder="Employee ID (e.g., DEV-003)">
+        <input type="text" id="regName" placeholder="Full Name">
+        <input type="text" id="regRole" placeholder="Role (e.g., Senior Engineer)">
+        <input type="password" id="regPass" placeholder="Secure Password (C++ Hashed)">
+        <button onclick="registerEmployee()">Register Personnel</button>
+    </div>
+
+    <!-- 2. ADMIN APPROVAL -->
+    <div class="card">
+        <h3>2. Administrator Authorization</h3>
+        <input type="text" id="appEmpId" placeholder="Employee ID to Authorize">
+        <button onclick="approveEmployee()">Grant Portal Access</button>
+    </div>
+
+    <!-- 3. TENURE TIERS -->
+    <div class="card">
+        <h3>3. Secure Vault Access (Tenure Verified)</h3>
+        <input type="text" id="tierEmpId" placeholder="Employee ID">
+        <div class="tier-btns">
+            <button onclick="testTier(1)">Access Tier 1 (2m)</button>
+            <button onclick="testTier(2)">Access Tier 2 (5m)</button>
+            <button onclick="testTier(3)">Access Tier 3 (10m)</button>
+            <button onclick="testTier(4)">Access Tier 4 (15m)</button>
+        </div>
+    </div>
+
+    <!-- OUTPUT LOG -->
+    <div class="card">
+        <h3>System Response Log</h3>
+        <pre id="result">System ready...</pre>
     </div>
 
     <script>
-        async function testTier3() {
-            const resElement = document.getElementById('result');
-            resElement.innerText = "Loading...";
+        const log = (data) => document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+
+        async function registerEmployee() {
             try {
-                const response = await fetch('/api/vault/tier3', {
+                const res = await fetch('/api/employees', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ empId: "DEV-003" })
+                    body: JSON.stringify({
+                        empId: document.getElementById('regEmpId').value,
+                        name: document.getElementById('regName').value,
+                        role: document.getElementById('regRole').value,
+                        password: document.getElementById('regPass').value
+                    })
                 });
-                const data = await response.json();
-                resElement.innerText = JSON.stringify(data, null, 2);
-            } catch (err) {
-                resElement.innerText = "Error: " + err.message;
-            }
+                log(await res.json());
+            } catch (err) { log({ error: err.message }); }
+        }
+
+        async function approveEmployee() {
+            const empId = document.getElementById('appEmpId').value;
+            try {
+                const res = await fetch(`/api/employees/approve/${empId}`, { method: 'PUT' });
+                log(await res.json());
+            } catch (err) { log({ error: err.message }); }
+        }
+
+        async function testTier(tierNum) {
+            const empId = document.getElementById('tierEmpId').value;
+            try {
+                const res = await fetch(`/api/vault/tier${tierNum}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ empId })
+                });
+                log(await res.json());
+            } catch (err) { log({ error: err.message }); }
         }
     </script>
 </body>
