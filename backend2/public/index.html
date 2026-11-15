@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knowledge Handover API - Judge Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
+        h1 { color: #38bdf8; }
+        .card { background: #1e293b; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 15px; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0ea5e9; }
+        pre { background: #0f172a; padding: 10px; border-radius: 4px; overflow-x: auto; color: #34d399; }
+    </style>
+</head>
+<body>
+    <h1>Knowledge Handover API</h1>
+    <p>Live Backend Demo for Judges</p>
+    
+    <div class="card">
+        <h3>Test Tenure Middleware (Tier 3 Access)</h3>
+        <button onclick="testTier3()">Send Test Request</button>
+        <pre id="result">Click button to test API response...</pre>
+    </div>
+
+    <script>
+        async function testTier3() {
+            const resElement = document.getElementById('result');
+            resElement.innerText = "Loading...";
+            try {
+                const response = await fetch('/api/vault/tier3', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ empId: "DEV-003" })
+                });
+                const data = await response.json();
+                resElement.innerText = JSON.stringify(data, null, 2);
+            } catch (err) {
+                resElement.innerText = "Error: " + err.message;
+            }
+        }
+    </script>
+</body>
+</html>

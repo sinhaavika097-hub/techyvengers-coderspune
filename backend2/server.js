@@ -3,18 +3,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { execFile } = require('child_process');
 const path = require('path');
-const Employee = require('./models/employee'); // Pulling your schema
+const Employee = require('./models/employee'); 
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
+app.use(express.static('public'));
 
-// --- MONGODB CONNECTION ---
+
 mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://YOUR_MONGO_URL_HERE')
     .then(() => console.log('✅ Connected to MongoDB Atlas'))
     .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
-// --- C++ HASHING ENGINE ---
+
 const generateHash = (password) => {
     return new Promise((resolve, reject) => {
         const hasherPath = path.join(__dirname, 'hasher.exe');
@@ -24,10 +25,6 @@ const generateHash = (password) => {
         });
     });
 };
-
-// ==========================================
-// 1. REGISTRATION ROUTE (What you finished earlier)
-// ==========================================
 app.post('/api/employees', async (req, res) => {
     try {
         const { empId, name, role, password } = req.body;
@@ -38,7 +35,7 @@ app.post('/api/employees', async (req, res) => {
             name,
             role,
             passkey,
-            isAuthorized: false // Placed in the waiting room
+            isAuthorized: false 
         });
 
         await newEmployee.save();
@@ -47,10 +44,6 @@ app.post('/api/employees', async (req, res) => {
         res.status(500).json({ error: "Failed to register employee." });
     }
 });
-
-// ==========================================
-// 2. ADMIN APPROVAL ROUTE (New)
-// ==========================================
 app.put('/api/employees/approve/:empId', async (req, res) => {
     try {
         const { empId } = req.params;
@@ -70,10 +63,6 @@ app.put('/api/employees/approve/:empId', async (req, res) => {
         res.status(500).json({ error: "Server error during approval." });
     }
 });
-
-// ==========================================
-// 3. PROGRESSIVE TENURE MIDDLEWARE (New)
-// ==========================================
 const requireTenure = (requiredMinutes) => {
     return async (req, res, next) => {
         try {
@@ -82,10 +71,7 @@ const requireTenure = (requiredMinutes) => {
 
             if (!employee) return res.status(404).json({ error: "Employee not found." });
             
-            // Is the manager's switch flipped?
             if (!employee.isAuthorized) return res.status(403).json({ error: "Access Denied: Pending Admin Approval." });
-
-            // Calculate tenure in minutes
             const now = new Date();
             const accountCreated = new Date(employee.createdAt);
             const diffInMinutes = Math.floor((now - accountCreated) / 60000);
@@ -103,10 +89,6 @@ const requireTenure = (requiredMinutes) => {
         }
     };
 };
-
-// ==========================================
-// 4. KNOWLEDGE HANDOVER TIERS (New)
-// ==========================================
 app.post('/api/vault/tier1', requireTenure(2), (req, res) => {
     res.json({ message: "🔓 Tier 1: Accessing Basic System Architecture & Repositories." });
 });
@@ -123,7 +105,6 @@ app.post('/api/vault/tier4', requireTenure(15), (req, res) => {
     res.json({ message: "🔓 Tier 4: Accessing Root Admin Credentials & Security Protocols." });
 });
 
-// --- START SERVER ---
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
