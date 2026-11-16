@@ -3,7 +3,7 @@ let targetEmployee = null; // Employee clicked, waiting for auth
 let unlockedEmployee = null; // Successfully authenticated employee
 
 // Fetch Data
-fetch('dashboard_data.json')
+fetch('http://localhost:3000/api/handover')
     .then(res => res.json())
     .then(data => {
         appData = data.employees;
